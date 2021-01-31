@@ -40,7 +40,7 @@ def Backup():
 		SAVE_FILE.close()
 		print('Finished config backup')
 
-schedule.every().minute.at(":00").do(Backup)
+schedule.every().minute.at(":00").do(Backup) #Call the backup function at the specified time
 while True:
 	schedule.run_pending()
 	time.sleep(1)
